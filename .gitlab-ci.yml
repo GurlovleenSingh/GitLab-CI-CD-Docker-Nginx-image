@@ -7,6 +7,6 @@ deploy s3:
     script:
         - aws --version
         - echo "HELLO S3">file.txt
-        - aws s3 cp file.txt s3://gurlovebucket/file2.txt
+        - aws s3 cp file.txt $AWS_S3_VARIABLE/file2.txt
     stage: deploy
 
